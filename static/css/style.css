@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(180, 255, 230);
+}
+
+.my-image {
+    border: 3px solid rgb(233, 233, 233);
+}
+
+.text-box {
+    border: 2px solid rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
+}
+
+.special {
+    border: 2px solid rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
+    font-style: italic;
+    color: #555;
+    font-size:20px;
+}
