@@ -21,17 +21,20 @@ def draw(number):
     pattern = mf.myfunc('x', number)
     return f"""<pre style="font-size: 100px; line-height: 1;">{pattern}</pre>"""
 
-@app.route('/sum/<int:x>/<int:y>')
-def sumation(x,y):
-    sum = x + y
-    return f"The result of sum between xx and yy is {sum}"
+@app.route('/sum/<xx>/<yy>')
+def sumation(xx,yy):
+    try:
+        x = int(xx)
+        y = int(yy)
+        sum = x + y
+        return f"The result of sum between {x} and {y} is {sum}"
+    except:
+        return "You are using miss data type for operation", 404
 
-@app.route('/concat/<int:x>/<int:y>')
+@app.route('/concat/<x>/<y>')
 def cancatenate(x,y):
-    x = str(x)
-    y = str(y)
     concat = x + y
-    return f"The result of cancatenate between xx and yy is {concat}"
+    return f"The result of cancatenate between {x} and {y} is {concat}"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
