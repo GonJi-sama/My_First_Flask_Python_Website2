@@ -26,5 +26,10 @@ def sumation(x,y):
     sum = x + y
     return f"The result of sum between xx and yy is {sum}"
 
+@app.route('/concat/<str:x>/<str:y>')
+def cancatenate(x,y):
+    concat = x + y
+    return f"The result of cancatenate between xx and yy is {concat}"
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
